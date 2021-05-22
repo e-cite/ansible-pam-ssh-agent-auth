@@ -1,0 +1,6 @@
+---
+pam_ssh_agent_auth__default_packages:
+  - libpam-ssh-agent-auth
+pam_ssh_agent_auth__default_keys_file: "/etc/security/authorized_keys"
+pam_ssh_agent_auth__default_sudo_file: "/etc/pam.d/sudo"
+pam_ssh_agent_auth__default_sudoers_file: "/etc/sudoers.d/pam-ssh-agent-auth"

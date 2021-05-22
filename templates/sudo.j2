@@ -1,0 +1,6 @@
+# {{ ansible_managed }}
+#%PAM-1.0
+auth sufficient pam_ssh_agent_auth.so file={{ pam_ssh_agent_auth__keys_file }}
+@include common-auth
+@include common-account
+@include common-session-noninteractive

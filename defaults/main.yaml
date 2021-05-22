@@ -1,0 +1,11 @@
+---
+pam_ssh_agent_auth__packages:
+  "{{ pam_ssh_agent_auth__default_packages }}"
+pam_ssh_agent_auth__packages_state:
+  "present"
+pam_ssh_agent_auth__keys_file:
+  "{{ pam_ssh_agent_auth__default_keys_file }}"
+pam_ssh_agent_auth__sudo_file:
+  "{{ pam_ssh_agent_auth__default_sudo_file }}"
+pam_ssh_agent_auth__sudoers_file:
+  "{{ pam_ssh_agent_auth__default_sudoers_file }}"

@@ -1,0 +1,24 @@
+---
+- name: Include OS vars
+  include_vars:
+    "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yaml"
+
+- name: Installiere Pakete
+  ansible.builtin.package:
+    name: "{{ pam_ssh_agent_auth__packages }}"
+    state: "{{ pam_ssh_agent_auth__packages_state }}"
+
+- name: Erstelle Files und Konfigurationen für pam_ssh_agent_auth
+  ansible.builtin.template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "root"
+    group: "root"
+    mode: "0644"
+  with_items:
+    - {src: "templates/authorized_keys.j2",
+       dest: "{{ pam_ssh_agent_auth__keys_file }}"}
+    - {src: "templates/sudo.j2",
+       dest: "{{ pam_ssh_agent_auth__sudo_file }}"}
+    - {src: "templates/sudoers.j2",
+       dest: "{{ pam_ssh_agent_auth__sudoers_file }}"}
