@@ -1,0 +1,3 @@
+---
+pam_ssh_agent_auth__default_packages:
+  - libpam-ssh-agent-auth

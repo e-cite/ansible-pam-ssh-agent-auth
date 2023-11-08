@@ -4,8 +4,8 @@ Installiert die PAM-Funktionalität, sich mittels SSH-Agent zu authentifizieren.
 
 Dadurch kann sudo mittels SSH-Agent und ohne Passwort verwendet werden.
 
-- https://manpages.debian.org/buster/libpam-ssh-agent-auth/index.html
-- https://packages.debian.org/de/buster/libpam-ssh-agent-auth
+- https://manpages.debian.org/bookworm/libpam-ssh-agent-auth/index.html
+- https://packages.debian.org/de/stable/libpam-ssh-agent-auth
 
 ## Anforderungen
 
